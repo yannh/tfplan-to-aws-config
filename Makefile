@@ -1,4 +1,7 @@
 #!/usr/bin/make -f
 
-build:
+build: fmt
 	go build -o bin/ ./...
+
+fmt:
+	go fmt ./...
