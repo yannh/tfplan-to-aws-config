@@ -1,0 +1,24 @@
+{
+  "format_version": "0.1",
+  "terraform_version": "0.12.24",
+  "resource_changes": [
+    {
+      "type": "aws_iam_user_policy",
+      "name": "my-user-policy",
+      "provider_name": "aws",
+      "change": {
+        "actions": [
+          "update"
+        ],
+        "after": {
+          "id": "id1",
+          "name": "an iam user policy",
+          "name_prefix": null,
+          "policy": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Sid\": \"\",\n      \"Effect\": \"Allow\",\n      \"Action\": [\n        \"s3:PutObjectAcl\",\n        \"s3:Put*\"\n      ],\n      \"Resource\": \"arn:aws:s3:::somebucket/*\"\n    }\n  ]\n}",
+          "user": "yann"
+        },
+        "after_unknown": {}
+      }
+    },
+  },
+}
